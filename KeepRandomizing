@@ -1,0 +1,25 @@
+using System;
+
+namespace KeepRandomizing
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            Random r = new Random();
+
+            int posX, posY;
+            int n = r.Next(1, 2000);
+
+            for (int i = 0; i < n; i++)
+            {
+                posX = r.Next(0, 501);
+                posY = r.Next(0, 501);
+
+                Console.WriteLine("Player Position:" + posX + "," + posY);
+            }
+            Console.WriteLine("The Position of the Player Changed " + n + " Times");
+        }
+    }
+}
