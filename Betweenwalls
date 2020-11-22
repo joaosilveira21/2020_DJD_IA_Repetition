@@ -1,0 +1,32 @@
+using System;
+
+namespace betweenwalls
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            Random r = new Random();
+
+            int number1 = r.Next(1, 101);
+            int number2 = r.Next(1, 101);
+            int min;
+
+            if (number1 > number2)
+            {
+                min = number1;
+                number1 = number2;
+                number2 = min;
+            }
+
+            Console.WriteLine("Valores:"+number1+" até " +number2);
+            
+            for (int i=number1; i < number2; i++)
+            {
+                Console.WriteLine("Valores entre Nº1 e Nº2:" + i);
+            }
+
+        }
+    }
+}
